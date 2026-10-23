@@ -10,6 +10,7 @@ The files moved here from `policy-execution` without change. No history is kept.
 **The scripts do not run from this repository yet.** They use paths of the
 `policy-execution` layout: `ROOT/target/...`, `ROOT/contracts` and `ROOT/scripts/solver-agent.py`.
 The first task is to give them one explicit setting for a `policy-execution` checkout or release.
+`ArcSolverProbe.t.sol` stays in `policy-execution/contracts/test`. It imports the core contracts, and `check-arc-solver.py before` simulates it with `eth_call`.
 The last `policy-execution` commit that held the original files is `e6863fe`.
 
 ## Contents
@@ -23,7 +24,6 @@ The last `policy-execution` commit that held the original files is `e6863fe`.
 | `scripts/test_check_arc_solver.py` | Tests for the solver probe; every external command is mocked |
 | `scripts/solver-agent.py` | Heuristic seller agent that quotes and delivers |
 | `scripts/test_instance_ionet.py` | Ties `instance-ionet.json` to its written record |
-| `ArcSolverProbe.t.sol` | Foundry test that the solver probe simulates with `eth_call` |
 | `solver-bounty/instance-ionet.*` | Workload of the mainnet canary deal |
 | `solver-bounty/ci-result.json` | Result of the CI proof run on a private Anvil chain |
 | `solver-bounty/canary/` | Evidence of each run, its manifest schema and the rules for what must never be committed |
